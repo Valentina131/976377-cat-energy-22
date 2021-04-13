@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="page_body">
     <header class="page-header">
@@ -72,7 +72,7 @@
                   <label for="catname" class="fields__label">Имя:*</label>
                   <input
                     type="text"
-                    class="fields__textfield"
+                    class="fields__textfield fields__textfield--name"
                     id="catname"
                     name="catname"
                     placeholder="Барсик"
@@ -82,7 +82,7 @@
                   <label for="weight" class="fields__label">Вес (кг):*</label>
                   <input
                     type="text"
-                    class="fields__textfield"
+                    class="fields__textfield fields__textfield--weight"
                     id="weight"
                     name="weight"
                     placeholder="7"
@@ -92,7 +92,7 @@
                   <label for="age" class="fields__label">Возраст (лет):</label>
                   <input
                     type="text"
-                    class="fields__textfield"
+                    class="fields__textfield fields__textfield--age"
                     id="age"
                     name="age"
                     placeholder="7"
@@ -160,35 +160,21 @@
                     <label for="email" class="fields__label">E-mail:*</label>
                     <input
                       type="email"
-                      class="fields__textfield"
+                      class="fields__textfield fields__textfield--email"
                       id="email"
                       name="email"
                       placeholder="kuklachev@gmail.com"
                     />
-                    <svg
-                      class="fields__contact-icon fields__contact-icon--mail"
-                      width="17"
-                      height="13"
-                    >
-                      <use xlink:href="#icon-mail"></use>
-                    </svg>
                   </div>
                   <div class="fields__block">
                     <label for="phone" class="fields__label">Телефон:*</label>
                     <input
                       type="tel"
-                      class="fields__textfield"
+                      class="fields__textfield fields__textfield--phone"
                       id="phone"
                       name="phone"
                       placeholder="8 (960) 900-60-90"
                     />
-                    <svg
-                      class="fields__contact-icon fields__contact-icon--phone"
-                      width="21"
-                      height="20"
-                    >
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
                   </div>
                 </div>
               </div>
@@ -265,7 +251,7 @@
         </div>
       </section>
 
-      <section class="cooperation cooperation--index">
+      <section class="cooperation cooperation--index cooperation_index--background">
         <div class="cooperation__wrapper">
           <div class="container">
             <div class="cooperation__inner">
@@ -282,13 +268,15 @@
           </div>
         </div>
         <div class="cooperation__map">
-          <img
-            class="cooperation__image"
-            src="img/content/map.png"
-            alt="map"
-            width="320"
-            height="362"
-          />
+          <div class="container">
+            <img
+              class="cooperation__image"
+              src="img/content/map.png"
+              alt="map"
+              width="320"
+              height="362"
+            />
+          </div>
         </div>
       </section>
     </main>
