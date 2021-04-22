@@ -1,26 +1,48 @@
 .button {
+  padding: 16px 55px;
+  display: inline-block;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
+  color: @bg_white;
+  text-decoration: none;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: @basic_green;
+  border: none;
+  cursor: pointer;
 }
 
 .head-block__button {
-  color: @bg_white;
-  background-color: @basic_green;
+  width: 190px;
+  margin-left: 20px;
+  padding: 8px 44px;
+}
+
+@media (min-width: @tablet-width) {
+  .head-block__button {
+    width: 200px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .head-block__button {
+    width: 200px;
+    height: 24px;
+  }
 }
 
 .fields__button {
-  background-color: @basic_green;
   border: none;
   font-size: 16px;
   line-height: 20px;
-  color: @bg_white;
   text-transform: uppercase;
-}
-
-.product__button {
-  .pattern_button () ;
-  background-color: @basic_green;
-  color: @bg_white;
 }
 
 .button--show-background {
@@ -31,6 +53,4 @@
 
 .add-product__button {
   .pattern_button () ;
-  background-color: @basic_green;
-  color: @bg_white;
 }

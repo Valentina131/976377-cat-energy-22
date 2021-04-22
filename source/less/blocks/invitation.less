@@ -4,6 +4,13 @@
   color: @dark_grey;
   font-weight: inherit;
   text-transform: uppercase;
+  margin-right: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__title {
+    margin-right: 340px;
+  }
 }
 
 .cooperation__adress {
@@ -14,4 +21,34 @@
 
 .cooperation_index--background {
   background-color: @basic_grey;
+}
+
+.cooperation__inner {
+  margin-left: 30px;
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__inner {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__wrapper {
+    position: relative;
+    width:570px;
+    height: 201px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__map {
+    width: 320px;
+    margin: 0 auto;
+  }
 }

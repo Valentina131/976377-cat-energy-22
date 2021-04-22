@@ -1,13 +1,42 @@
+.programs-option__wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+@media (min-width: @desktop-width) {
+  .programs-option__wrapper {
+    grid-template-columns: 1fr 1fr;
+    width: 1220px;
+  }
+}
+
+.programs-option {
+  margin-left: 20px;
+  margin-bottom: 63px;
+}
 
 .programs-option__item {
   width: 280px;
   background-color: @basic_grey;
 }
 
+@media (min-width: @tablet-width) {
+  .programs-option__item {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs-option__item {
+    width: 570px;
+  }
+}
+
 .program__title {
   font-size: 24px;
   line-height: 37px;
   font-weight: inherit;
+  text-transform: uppercase;
 }
 
 .program__text {
@@ -19,4 +48,5 @@
   line-height: 16px;
   color: @black;
   font-weight: inherit;
+  text-transform: uppercase;
 }
