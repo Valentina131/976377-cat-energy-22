@@ -2,6 +2,19 @@
   background-color: @neutral_grey;
 }
 
+@media (min-width: @tablet-width) {
+  .demo {
+    background: @basic_grey-linear;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo {
+    margin-bottom: 80px;
+    background: linear-gradient(to bottom, @bg_white 115px, @basic_grey 30px);
+  }
+}
+
 .demo__title {
   font-size: 36px;
   line-height: 40px;
@@ -9,8 +22,54 @@
   font-weight: inherit;
 }
 
+@media (min-width: @tablet-width) {
+  .demo__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__title {
+    margin-bottom: 150px;
+  }
+}
+
 .demo__text {
   .base_font ();
+}
+
+@media (min-width: @tablet-width) {
+  .demo__text {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__text {
+    width: 436px;
+  }
+}
+
+.demo__stats {
+  margin-left: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .demo__stats {
+    width: 708px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__stats {
+    width: 436px;
+    margin-top: 100px;
+    flex-direction: column;
+  }
 }
 
 .demo__stats-value {
@@ -32,4 +91,87 @@
   font-weight: inherit;
   color: @black;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .demo__caption {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__caption {
+    margin-top: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.demo__illustration--after {
+  display: none;
+}
+
+.demo__stats-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.demo__stats-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__controls {
+  padding-bottom: 30px;
+  margin-left: 30px;
+}
+
+.demo__progress {
+  width: 300px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container-demo__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container-demo__wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__progress::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -74px;
+    left: 552px;
+    width: 708px;
+    height: 700px;
+    background-image: url("../img/content/image_cat_tablet.png");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: relative;
+    top: -50px;
+    left: 315px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__image_fat {
+    display: none;
+  }
 }
