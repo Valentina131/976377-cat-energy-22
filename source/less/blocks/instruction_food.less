@@ -1,9 +1,9 @@
 .instruction {
-  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .instruction__list {
-  width: 320px;
+  width: 280px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -14,7 +14,6 @@
     width: 633px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 140px;
   }
 }
 
@@ -22,7 +21,6 @@
   .instruction__list {
     width: 1220px;
     grid-template-columns: repeat(4, 1fr);
-
   }
 }
 
@@ -41,7 +39,7 @@
 
 @media (min-width: @desktop-width) {
   .instruction__item {
-  height: 280px;
+    height: 280px;
   }
 }
 
@@ -50,6 +48,13 @@
   line-height: 40px;
   color: @black;
   font-weight: inherit;
+}
+
+@media (min-width: @tablet-width) {
+  .instruction__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .instruction__illustration {

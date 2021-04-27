@@ -8,12 +8,18 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .demo {
+    margin-bottom: 80px;
+    background: linear-gradient(to bottom, #FFFFFF 115px, #F2F2F2 30px);
+  }
+}
+
 .demo__title {
   font-size: 36px;
   line-height: 40px;
   color: @black;
   font-weight: inherit;
-  margin-left: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,14 +29,19 @@
 }
 }
 
+@media (min-width: @desktop-width) {
+  .demo__title {
+    margin-bottom: 150px
+}
+}
+
 .demo__text {
   .base_font ();
-  margin-left: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .demo__text {
-    width: 708px;
+    width: 700px;
   }
 }
 
@@ -49,13 +60,14 @@
     width: 708px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    margin-left: 0px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .demo__stats {
     width: 436px;
+    margin-top: 100px;
     flex-direction: column;
   }
 }
@@ -91,19 +103,21 @@
 
 @media (min-width: @desktop-width) {
   .demo__caption {
+    margin-top: 100px;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .demo__illustration--after {
-  display: none;
+      display: none;
 }
 
   .demo__stats-list {
     display: flex;
     justify-content: space-between;
   }
+
 
 .demo__stats-item {
     display: flex;
@@ -120,11 +134,45 @@
   margin: 0 auto;
 }
 
+@media (min-width: @tablet-width) {
+  .container-demo__wrapper {
+    width: 708px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .container-demo__wrapper {
     width: 1220px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+    position: relative;
   }
 }
+
+@media (min-width: @desktop-width) {
+.demo__progress::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -74px;
+    left: 552px;
+    width: 708px;
+    height: 700px;
+    background-image: url("../img/content/image_cat_tablet.png");
+    background-repeat: no-repeat;
+}
+}
+
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: relative;
+    top: -50px;
+    left: 315px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__image_fat {
+    display: none;
+  }
+}
+
