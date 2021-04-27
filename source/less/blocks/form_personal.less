@@ -1,8 +1,41 @@
+.fields__wrapper {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__wrapper {
+    width: 1220px;
+  }
+}
+
+.fields__block {
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__block {
+    margin-left: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__block {
+    margin-left: 110px;
+  }
+}
+
 .fields__label {
   .pattern_font ();
   text-transform: uppercase;
+  margin-right: 12px;
 }
-
 
 .fields__textfield {
   margin-bottom: 14px;
@@ -15,18 +48,55 @@
   text-transform: uppercase;
   color: @deep_special_grey;
   font-family: "Oswald", serif;
+  padding-left: 15px;
 }
 
 .fields__textfield--name {
   width: 229px;
 }
 
+@media (min-width: @tablet-width) {
+  .fields__textfield--name {
+    width: 567px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textfield--name {
+    width: 506px;
+  }
+}
+
 .fields__textfield--weight {
   width: 207px;
 }
 
+@media (min-width: @tablet-width) {
+  .fields__textfield--weight {
+    width: 545px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textfield--weight {
+    width: 483px;
+  }
+}
+
 .fields__textfield--age {
   width: 172px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__textfield--age {
+    width: 513px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textfield--age {
+    width: 448px;
+  }
 }
 
 .fields__textfield--email {
@@ -34,9 +104,103 @@
   background: url("../img/content/icon_email.svg") no-repeat center right;
 }
 
+@media (min-width: @tablet-width) {
+  .fields__textfield--email {
+    width: 551px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textfield--email {
+    width: 486px;
+  }
+}
+
 .fields__textfield--phone {
   width: 204px;
   background: url("../img/content/phone.svg") no-repeat center right;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__textfield--phone {
+    width: 535px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textfield--phone {
+    width: 472px;
+  }
+}
+
+.fields__set {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__set {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__set {
+    width: 1220px;
+  }
+}
+
+.fields__list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .fields__list {
+    margin-top: 20px;
+  }
+}
+
+.program-type-list__item {
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-type-list__item {
+    margin-left: 99px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields_block-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__inner {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.fields__set {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__set {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__set {
+    width: 1220px;
+  }
 }
 
 .fields__title {
@@ -44,12 +208,40 @@
   line-height: 26px;
   color: @black;
   font-weight: inherit;
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__title {
+    margin-left: 69px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__title {
+    margin-left: 110px;
+  }
 }
 
 .fields__textarea {
   width: 280px;
   height: 151px;
   border: solid 1px @pale_grey;
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__textarea {
+    width: 631px;
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__textarea {
+    width: 1220px;
+    margin-left: 110px;
+  }
 }
 
 .fields__textarea::placeholder {
@@ -57,12 +249,5 @@
   text-transform: uppercase;
   color: @deep_special_grey;
   font-family: "Oswald", serif;
-  text-align: center;
-}
-
-.fields__note {
-  font-size: 14px;
-  line-height: 16px;
-  color: @black;
-  font-family: "Arial", sans-serif;
+  padding-left: 15px;
 }

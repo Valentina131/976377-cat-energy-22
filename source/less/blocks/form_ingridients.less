@@ -4,3 +4,75 @@
   color: @black;
   text-transform: uppercase;
 }
+
+.add-list {
+  width: 280px;
+  margin-left: 20px;
+  margin-bottom: 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .add-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 565px;
+    margin-left: 70px;
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-list {
+    grid-template-columns: repeat(4, 1fr);
+    width: 1124px;
+    margin-left: 110px;
+    margin-bottom: 61px;
+  }
+}
+
+.fields__note {
+  font-size: 14px;
+  line-height: 16px;
+  color: @black;
+  font-family: "Arial", sans-serif;
+  margin-left: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fields__button-block {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__button-block {
+    flex-direction: row;
+    margin-left: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__button-block {
+    margin-left: 111px;
+  }
+}
+
+.fields__button {
+  margin-left: 20px;
+  margin-bottom: 21px;
+  padding: 10px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__button {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fields__button {
+    padding: 10px 130px;
+  }
+}

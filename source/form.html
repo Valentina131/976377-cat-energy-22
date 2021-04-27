@@ -26,7 +26,7 @@
         alt="cat energy"
       />
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle visually-hidden" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
@@ -56,7 +56,7 @@
         <div class="container">
           <h1 class="title-block__title">Подбор программы</h1>
           <p class="title-block__text">
-            Заполните анкету и мы подберем программу питания для вашего кота
+            Заполните анкету и мы подберем<br> программу питания для вашего кота
           </p>
         </div>
       </section>
@@ -70,6 +70,8 @@
           >
             <div class="fields__wrapper">
               <div class="fields__set fields__set--personal">
+                <div class="fields_block-column">
+                <div class="fields_block-block">
                 <div class="fields__block">
                   <label for="catname" class="fields__label">Имя:*</label>
                   <input
@@ -100,7 +102,7 @@
                     placeholder="7"
                   />
                 </div>
-              </div>
+                </div>
               <div class="fields__set fields__set--program">
                 <ul class="fields__list program-type-list">
                   <li class="program-type-list__item">
@@ -150,6 +152,7 @@
                     >
                   </li>
                 </ul>
+              </div>
               </div>
               <div class="fields__set fields__set--contacts">
                 <div class="fields__head">
@@ -246,7 +249,7 @@
                 <button class="fields__button button" type="submit">
                   Отправить заявку
                 </button>
-                <span class="fields__note">* — Обязательные поля</span>
+                <span class="fields__note"><br>* — Обязательные поля</span>
               </div>
             </div>
           </form>
