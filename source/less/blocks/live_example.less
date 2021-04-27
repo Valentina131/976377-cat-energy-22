@@ -11,7 +11,7 @@
 @media (min-width: @desktop-width) {
   .demo {
     margin-bottom: 80px;
-    background: linear-gradient(to bottom, #FFFFFF 115px, #F2F2F2 30px);
+    background: linear-gradient(to bottom, @bg_white 115px, @basic_grey 30px);
   }
 }
 
@@ -26,7 +26,13 @@
   .demo__title {
     font-size: 60px;
     line-height: 60px;
+  }
 }
+
+@media (min-width: @desktop-width) {
+  .demo__title {
+    margin-bottom: 150px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -59,8 +65,8 @@
   .demo__stats {
     width: 708px;
     display: flex;
-    flex-direction: row;
-    margin-left: 0px;
+    flex-direction: row;  
+    margin-left: 0;
   }
 }
 
@@ -113,15 +119,16 @@
       display: none;
 }
 
-  .demo__stats-list {
-    display: flex;
-    justify-content: space-between;
-  }
+.demo__stats-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 .demo__stats-item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider__controls {
@@ -149,7 +156,7 @@
 }
 
 @media (min-width: @desktop-width) {
-.demo__progress::before{
+  .demo__progress::before {
     content: " ";
     display: block;
     position: absolute;
@@ -159,7 +166,7 @@
     height: 700px;
     background-image: url("../img/content/image_cat_tablet.png");
     background-repeat: no-repeat;
-}
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -167,6 +174,12 @@
     position: relative;
     top: -50px;
     left: 315px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .demo__image_fat {
+    display: none;
   }
 }
 
