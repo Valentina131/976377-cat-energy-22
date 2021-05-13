@@ -15,21 +15,22 @@
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo/logo_cat_mobile.svg" width="34" height="38"
           alt="кэт энерджи" />
+        <img class="page-header__logo-tablet" src="img/logo/logo_cat_tablet.svg" width="174" height="52"
+          alt="кэт энерджи" />
+        <img class="page-header__logo-desktop" src="img/logo/logo_cat_desktop.svg" width="202" height="59"
+          alt="кэт энерджи" />
       </a>
       <img class="page-header__image" src="img/logo/logo_word_mobile.svg" width="101" height="18" alt="cat energy" />
     </div>
-    <nav class="main-nav">
-      <div class="nav-toggle_wrapper">
-        <button class="main-nav__toggle visually-hidden" type="button">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
-
       <div class="main-nav__wrapper">
         <ul class="header__menu header__menu--index">
           <li class="header__menu-item header__menu-item--active">
             <a href="index.html" class="header__menu-link">
-              <span class="menu_item-text">Главная</span>
+              <span class="menu_item-text menu_item-text--active">Главная</span>
             </a>
           </li>
           <li class="header__menu-item">
@@ -46,6 +47,22 @@
       </div>
     </nav>
   </header>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   <main class="page-main">
     <section class="head-block">
       <h1 class="visually-hidden">Cat Energy</h1>
@@ -67,20 +84,17 @@
         <div class="programs-option__wrapper">
           <article class="programs-option__item program">
             <div class="program__wrapper">
-              <div class="program__illustration">
-                <img class="programs-option_cat-slim" src="img/pic_all/cat_slim.svg" width="36" height="50"
-                  alt="cat slim" />
-              </div>
+              <div class="program_block program_block--slim">
               <h2 class="program__title">Похудение</h2>
-              <p class="program__text">
+              <p class="program__text program__text--slim">
                 Ваш кот весит больше собаки и почти утратил способность лазить
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему
                 питомцу сбросить лишний вес.
               </p>
-              <div class="program__food">
+              </div>
+              <div class="program__food program__food--slim">
                 <a href="#" class="program__link">
                   <h3 class="program__catalog">Каталог Slim</h3>
-                  <img class="icon_arrow" src="img/pic_all/icon_arrow.svg" width="32" height="10" alt="arrow" />
                 </a>
               </div>
             </div>
@@ -88,20 +102,17 @@
 
           <article class="programs-option__item program">
             <div class="program__wrapper">
-              <div class="program__illustration">
-                <img class="programs-option_cat-slim" src="img/pic_all/cat_pro.svg" width="67" height="28"
-                  alt="cat pro" />
-              </div>
-              <h2 class="program__title">Набор массы</h2>
+              <div class="program_block program_block--pro">
+              <h2 class="program__title program__title--pro">Набор массы</h2>
               <p class="program__text program__text--pro">
                 Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые
                 мышцы!
               </p>
-              <div class="program__food">
+            </div>
+              <div class="program__food program__food--pro">
                 <a href="#" class="program__link">
                   <h3 class="program__catalog">Каталог pro</h3>
-                  <img class="icon_arrow" src="img/pic_all/icon_arrow.svg" width="32" height="10" alt="arrow" />
                 </a>
               </div>
             </div>
@@ -117,7 +128,7 @@
           <ul class="instruction__list">
             <li class="instruction__item instruction__item--1">
               <div class="instruction__illustration">
-                <img class="instruction__image" src="img/pic_all/icon_leaf.svg" alt="leaf" width="25" height="28" />
+                <img class="instruction__image" src="img/pic_all/icon_leaf.svg" alt="leaf" width="30" height="31" />
               </div>
               <p class="instruction__text">
                 Функциональное питание содержит только полезные питательные
@@ -126,7 +137,7 @@
             </li>
             <li class="instruction__item instruction__item--2">
               <div class="instruction__illustration">
-                <img class="instruction__image" src="img/pic_all/icon_tub.svg" alt="powder" width="29" height="23" />
+                <img class="instruction__image" src="img/pic_all/icon_tub.svg" alt="powder" width="29" height="31" />
               </div>
               <p class="instruction__text">
                 Выпускается в виде порошка, который нужно лишь залить кипятком
@@ -138,16 +149,16 @@
                 <img class="instruction__image" src="img/pic_all/icon_eat.svg" alt="dining" width="25" height="30" />
               </div>
               <p class="instruction__text">
-                Замените один-два приема обычной еды на наше фунцкциональное
+                Замените один-два приема обычной еды на наше функциональное
                 питание.
               </p>
             </li>
             <li class="instruction__item instruction__item--4">
               <div class="instruction__illustration">
-                <img class="instruction__image" src="img/pic_all/icon_alarm.svg" alt="clock" width="25" height="27" />
+                <img class="instruction__image" src="img/pic_all/icon_alarm.svg" alt="clock" width="32" height="33" />
               </div>
               <p class="instruction__text">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br class="transfer">вашего
                 питомца!
               </p>
             </li>
@@ -171,11 +182,11 @@
             <div class="demo__stats-list">
               <div class="demo__stats-item demo__stats-item--weight">
                 <b class="demo__stats-value">5 кг</b>
-                <small class="demo__stats-subtitle">снижение веса</small>
+                <small class="demo__stats-subtitle">снижение<br> веса</small>
               </div>
               <div class="demo__stats-item demo__stats-item--days">
                 <b class="demo__stats-value">60 дней</b>
-                <small class="demo__stats-subtitle">затрачено времени</small>
+                <small class="demo__stats-subtitle">затрачено<br> времени</small>
               </div>
             </div>
             <p class="demo__caption">
@@ -214,11 +225,11 @@
         <div class="container">
           <div class="cooperation__inner">
             <h2 class="cooperation__title">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем<br>к&nbsp;сотрудничеству<br class="cooperation_transfer">дилеров!
             </h2>
             <div class="cooperation__adress">
               <p class="cooperation__street">
-                ул. Большая Конюшенная, д. 19/8
+                ул. Большая<br> Конюшенная, д. 19/8
               </p>
               <p class="cooperation__city">Санкт-Петербург</p>
             </div>
@@ -228,6 +239,8 @@
       <div class="cooperation__map">
         <div class="container">
           <img class="cooperation__image" src="img/content/map_mobile.png" alt="map" width="320" height="362" />
+          <img class="cooperation__image--tablet" src="img/content/map_tablet.png" alt="map" width="768" height="400" />
+          <img class="cooperation__image--desktop" src="img/content/map_desktop.png" alt="map" width="1440" height="400" />
         </div>
       </div>
     </section>
@@ -248,22 +261,22 @@
             <li class="social-list__item">
               <a href="" class="social-list__link">
                 <h3 class="visually-hidden">Мы Вконтакте</h3>
-                <img class="icon_vkontakte__image" src="img/pic_all/icon_vkontakte.svg" alt="vkontakte" width="22"
-                  height="13" />
+                <img class="icon_vkontakte__image" src="img/pic_all/icon_vkontakte.svg" alt="vkontakte" width="23"
+                  height="16" />
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
                 <h3 class="visually-hidden">Мы в Инстаграме</h3>
                 <img class="icon_instagram__image" src="img/pic_all/icon_instagram.svg" alt="instagram" width="16"
-                  height="16" />
+                  height="13" />
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
                 <h3 class="visually-hidden">Мы в Фейсбуке</h3>
-                <img class="icon_facebook__image" src="img/pic_all/icon_facebook.svg" alt="facebook" width="16"
-                  height="18" />
+                <img class="icon_facebook__image" src="img/pic_all/icon_facebook.svg" alt="facebook" width="18"
+                  height="22" />
               </a>
             </li>
           </ul>
@@ -271,8 +284,8 @@
         <div class="footer__block footer__block--copyright">
           <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
             <h3 class="footer__developer">HTML Academy</h3>
-            <img class="icon_academy__image" src="img/pic_all/htmlacademy.svg" alt="htmlacademy" width="27"
-              height="34" />
+            <img class="icon_academy__image" src="img/pic_all/htmlacademy.svg" alt="htmlacademy" width="42"
+              height="38" />
           </a>
         </div>
       </div>
