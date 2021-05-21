@@ -1,16 +1,16 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
-  margin-bottom: 1px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
+    width: 700px;
+    margin: 0 auto;
   }
 }
 
@@ -20,117 +20,14 @@
   }
 }
 
-.page-header__image {
-  margin-left: 52px;
-  margin-bottom: 8px;
-}
-
-.page-header__logo-tablet {
-  display: none;
-}
-
-.page-header__logo-desktop {
-  display: none;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__logo-tablet {
-    display: block;
-  }
-  .page-header__logo-image {
-    display: none;
-  }
-  .page-header__image {
-    display: none;
-  }
-  .page-header__logo-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__logo-tablet {
-    display: none;
-  }
-  .page-header__logo-desktop {
-    display: block;
-    margin-top: 29px;
-      &:hover {
-        opacity: 0.8;
-      }
-      &:active {
-        opacity: 0.6;
-      }
-  }
-}
-
-.header_logo-wrapper {
-  padding: 12px 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .header_logo-wrapper {
-    padding: 0px;
-    margin-top: 24px;
-    margin-left: 1px;
-  }
-}
-
-.main-nav {
-  position: relative;
-  width: auto;
-}
-
-.main-nav__toggle {
-  position: absolute;
-  top: -57px;
-  right: 10px;
-  display: block;
-  width: 60px;
-  height: 50px;
-  background-color: @bg_white;
-  cursor: pointer;
-  border: none;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 17px;
-  width: 24px;
-  height: 18px;
-  background-image: url("../img/logo/burger.svg");
-}
-
-@media (max-width: @mobile-width-only) {
-  .main-nav--closed .header__menu-item {
-    display: none;
-  }
-
-.main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-}
-
-.main-nav--opened .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 24px;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/logo/close_mobile.svg");
-}
-
 .header__menu {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 @media (min-width: @tablet-width) {
-  .header__menu  {
+  .header__menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,34 +39,6 @@
 @media (min-width: @desktop-width) {
   .header__menu {
     width: 478px;
-    margin-top: 49px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .header__menu-item--active {
-    position: relative;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .header__menu-item--active::before {
-    content: " ";
-    position: absolute;
-    width: 64px;
-    height: 2px;
-    background-color: @basic_green;
-    bottom: 14px;
-    left: 1px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .header__menu-item--active::before {
-    width: 68px;
-    bottom: 12px;
-    left: 1px;
-    background-color: @bg_white;
   }
 }
 
@@ -179,81 +48,10 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 500;
-  padding: 23px 20px 22px;
-}
-
-@media (min-width: @tablet-width) {
-  .header__menu-link {
-    font-size: 18px;
-    line-height: 24px;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 0px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .header__menu-link {
-    font-size: 20px;
-    line-height: 29,64px;
-  }
-}
-
-.header__menu a {
-  position: relative;
-  display: block;
-  padding: 23px 20px;
-  padding-bottom: 22px;
-  text-align: center;
-  text-decoration: none;
-  border-top: 1px solid @ultra_neutral_grey;
-}
-
-@media (min-width: @tablet-width) {
-  .header__menu a {
-    padding: 23px 1px;
-    border: none;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .menu_item-text {
     color: @bg_white;
-  }
-}
-
-.menu_item-text {
-  &:hover {
-    color:@bg_black-neutral_lite;
-  }
-  &:active {
-    color:@bg_black_lite;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .menu_item-text {
-    &:hover {
-      color:@bg_white-neutral_lite;
-    }
-    &:active {
-      color:@bg_white-lite;
-    }
-  }
-}
-
-.menu_item-text--active {
-  &:hover,
-  &:active {
-    color:@black;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .menu_item-text--active {
-    &:hover,
-    &:active {
-      color:@bg_white;
-    }
   }
 }
