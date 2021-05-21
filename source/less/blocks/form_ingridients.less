@@ -3,30 +3,169 @@
   .pattern_font ();
   color: @black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 29.64px;
+  }
+}
+
+.add-list__item {
+  margin-bottom: 25px;
+  margin-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0px;
+  }
 }
 
 .add-list {
   width: 280px;
   margin-left: 20px;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 688px;
+      margin-left: 54px;
+      margin-bottom: 16px;
+      margin-top: 63px;
+    }
+
+  @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 80px;
+      justify-content: space-around;
+      width: 1220px;
+      margin-left: 60px;
+      margin-bottom: 23px;
+    }
+  }
+
+.fields__button-block {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+      flex-direction: row;
+      margin-left: 42px;
+    }
+
+  @media (min-width: @desktop-width) {
+      margin-left: 2px;
+    }
+  }
+
+.fields__button {
+  margin-left: 20px;
+  margin-bottom: 21px;
+  padding: 10px 20px;
+  width: 280px;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald" , sans-serif;
+
+  @media (min-width: @tablet-width) {
+      width: 282px;
+      margin: 0px;
+      padding: 16px 31px;
+      font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+      width: 568px;
+      padding: 16px 130px;
+    }
+  }
+
+.fields__set--add {
+  position: relative;
+}
+
+.fields__set--add::before {
+  position: absolute;
+  content: " ";
+  width: 136px;
+  border-top: 2px solid @basic_green;
+  top: 15px;
+  right: 0px;
+
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    top: 22px;
+    left: -29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    top: 22px;
+    left: -109px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .add-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 565px;
-    margin-left: 70px;
-    margin-bottom: 54px;
+  .fields__set--add::after {
+  position: absolute;
+  content: " ";
+  width: 446px;
+  border-top: 2px solid @basic_green;
+  top: 22px;
+  left: 293px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .add-list {
-    grid-template-columns: repeat(4, 1fr);
-    width: 1124px;
-    margin-left: 110px;
-    margin-bottom: 61px;
+  .fields__set--add::after {
+  width: 1078px;
+  top: 23px;
+  left: 253px;
+  }
+}
+
+.add-list__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-list__input + label::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: -5px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @light_dim_grey;
+
+  @media (min-width: @tablet-width) {
+    left: -59px;
+    top: -6px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.add-list__input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -40px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/catalog/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  @media (min-width: @tablet-width) {
+    left: -48px;
+    top: 7px;
   }
 }
 
@@ -35,44 +174,30 @@
   line-height: 16px;
   color: @black;
   font-family: "Arial", sans-serif;
-  margin-left: 20px;
   text-align: center;
-  margin-bottom: 20px;
-}
+  margin-bottom: 33px;
 
-.fields__button-block {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-left: 62px;
+    margin-bottom: 0px;
+    padding-top: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 82px;
+    padding-top: 18px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .fields__button-block {
-    flex-direction: row;
-    margin-left: 71px;
+  .fields__set--add .fields__title {
+    margin-top: 62px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .fields__button-block {
-    margin-left: 111px;
-  }
-}
-
-.fields__button {
-  margin-left: 20px;
-  margin-bottom: 21px;
-  padding: 10px 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .fields__button {
-    padding: 10px 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .fields__button {
-    padding: 10px 130px;
+  .fields__set--add .fields__title {
+    margin-top: 64px;
   }
 }
