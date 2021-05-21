@@ -86,7 +86,7 @@
 @media (min-width: @desktop-width) {
   .instruction__item {
     height: 280px;
-    margin: 0px;
+    margin: 0;
   }
 }
 
@@ -107,7 +107,7 @@
 
 @media (min-width: @desktop-width) {
   .instruction__illustration {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -123,13 +123,13 @@
 
 .instruction__text {
   margin-left: 20px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 @media (min-width: @tablet-width) {
   .instruction__text {
     margin-top: 16px;
-    margin-left: 0px;
+    margin-left: 0;
     font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -138,11 +138,11 @@
 }
 
 @media (min-width: @desktop-width) {
-    .instruction__text {
-      margin-top: 0px;
-      padding-bottom: 72px;
-    }
+  .instruction__text {
+    margin-top: 0;
+    padding-bottom: 72px;
   }
+}
 
 @media (min-width: @tablet-width) {
   .instruction__item--1 {
@@ -243,17 +243,11 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .instruction__text--4 {
-    br{
-      display: block;
-    }
-  }
-}
+.instruction__text--export {
+  display: none;
 
-.instruction__item--4 .instruction__text{
-  br{
-    display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
