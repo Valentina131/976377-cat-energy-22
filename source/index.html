@@ -23,9 +23,9 @@
       <img class="page-header__image" src="img/logo/logo_word_mobile.svg" width="101" height="18" alt="cat energy" />
     </div>
     <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="header__menu">
           <li class="header__menu-item header__menu-item--active">
@@ -53,7 +53,7 @@
 
     navMain.classList.remove('main-nav--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
@@ -62,21 +62,27 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
+
   </script>
   <main class="page-main">
     <section class="head-block">
       <h1 class="visually-hidden">Cat Energy</h1>
       <div class="container">
         <div class="head-block__wrapper">
-          <h2 class="head-block__title">
-            Функциональное <br />
-            питание для котов
-          </h2>
-          <p class="head-block__text">Занялся собой? Займись котом!</p>
-          <img class="head-block_img--mobile" src="img/content/index_background_mobile.png" alt="кошка" width="320" height="302">
-          <img class="head-block_img--tablet" src="img/content/index_tablet.png" alt="банка с кормом" width="709" height="609">
-          <img class="head-block_img--desktop" src="img/content/index_background_desktop.png" alt="кошка" width="720" height="694">
-          <a href="form.html" class="head-block__button button">Подобрать программу</a>
+          <div class="head-block__share">
+            <h2 class="head-block__title">
+              Функциональное <br />
+              питание для котов
+            </h2>
+            <p class="head-block__text">Занялся собой? Займись котом!</p>
+            <a href="form.html" class="head-block__button button">Подобрать программу</a>
+          </div>
+          <img class="head-block_img--mobile" src="img/content/index_background_mobile.png" alt="кошка" width="320"
+            height="302">
+          <img class="head-block_img--tablet" src="img/content/index_tablet.png" alt="банка с кормом" width="709"
+            height="609">
+          <img class="head-block_img--desktop" src="img/content/index_desktop.png" alt="банка кормом" width="552"
+            height="499">
         </div>
       </div>
     </section>
@@ -85,15 +91,15 @@
       <h2 class="visually-hidden">Варианты программ</h2>
       <div class="container">
         <div class="programs-option__wrapper">
-          <article class="programs-option__item program">
+          <article class="programs-option__item program-slim">
             <div class="program__wrapper">
               <div class="program_block program_block--slim">
-              <h2 class="program__title">Похудение</h2>
-              <p class="program__text program__text--slim">
-                Ваш кот весит больше собаки и почти утратил способность лазить
-                по деревьям? Пора на диету! Cat Energy Slim поможет вашему
-                питомцу сбросить лишний вес.
-              </p>
+                <h2 class="program__title">Похудение</h2>
+                <p class="program__text program__text--slim">
+                  Ваш кот весит больше собаки и почти утратил способность лазить
+                  по деревьям? Пора на диету! Cat Energy Slim поможет вашему
+                  питомцу сбросить лишний вес.
+                </p>
               </div>
               <div class="program__food program__food--slim">
                 <a href="#" class="program__link">
@@ -103,16 +109,16 @@
             </div>
           </article>
 
-          <article class="programs-option__item program">
+          <article class="programs-option__item program-pro">
             <div class="program__wrapper">
               <div class="program_block program_block--pro">
-              <h2 class="program__title program__title--pro">Набор массы</h2>
-              <p class="program__text program__text--pro">
-                Заработать авторитет среди дворовых котов и даже собак? Серия
-                Cat Energy Pro поможет вашему коту нарастить необходимые
-                мышцы!
-              </p>
-            </div>
+                <h2 class="program__title program__title--pro">Набор массы</h2>
+                <p class="program__text program__text--pro">
+                  Заработать авторитет среди дворовых котов и даже собак? Серия
+                  Cat Energy Pro поможет вашему коту нарастить необходимые
+                  мышцы!
+                </p>
+              </div>
               <div class="program__food program__food--pro">
                 <a href="#" class="program__link">
                   <h3 class="program__catalog">Каталог pro</h3>
@@ -161,7 +167,7 @@
                 <img class="instruction__image" src="img/pic_all/icon_alarm.svg" alt="clock" width="32" height="33" />
               </div>
               <p class="instruction__text instruction__text--4">
-                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br class="instruction__text--export">вашего питомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br class="transfer">вашего питомца!
               </p>
             </li>
           </ul>
@@ -173,49 +179,53 @@
       <div class="container container-demo__wrapper">
         <div class="demo__wrapper">
           <div class="demo-part">
-          <h2 class="demo__title">Живой пример</h2>
-          <p class="demo__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-            на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов
-            в день.
-          </p>
-          <div class="demo__stats">
-            <div class="demo__stats-list">
-              <div class="demo__stats-item demo__stats-item--weight">
-                <b class="demo__stats-value">5 кг</b>
-                <small class="demo__stats-subtitle">снижение<br> веса</small>
+            <h2 class="demo__title">Живой пример</h2>
+            <p class="demo__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <div class="demo__stats">
+              <div class="demo__stats-list">
+                <div class="demo__stats-item demo__stats-item--weight">
+                  <b class="demo__stats-value">5 кг</b>
+                  <small class="demo__stats-subtitle">снижение<br> веса</small>
+                </div>
+                <div class="demo__stats-item demo__stats-item--days">
+                  <b class="demo__stats-value">60 дней</b>
+                  <small class="demo__stats-subtitle">затрачено<br> времени</small>
+                </div>
               </div>
-              <div class="demo__stats-item demo__stats-item--days">
-                <b class="demo__stats-value">60 дней</b>
-                <small class="demo__stats-subtitle">затрачено<br> времени</small>
+              <p class="demo__caption">
+                <span>Затраты на питание: </span>
+                <span>15 000 руб.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="story__toggle toggle">
+            <input class="toggle__input toggle__input--before" type="radio" id="story-input-before" name="story-input">
+            <input class="toggle__input toggle__input--after" type="radio" id="story-input-after" name="story-input">
+            <div class="toggle__items">
+              <div class="toggle__item toggle__item--before">
+                <img class="toggle__img" src="img/content/before-mobile.png" width="311" height="232" alt="До">
+                <img class="toggle__img-tablet" src="img/content/cat-fat-tablet.png" width="708" height="620" alt="До">
+              </div>
+              <div class="toggle__item toggle__item--after">
+                <img class="toggle__img" src="img/content/after-mobile.png" width="251" height="240" alt="После">
+                <img class="toggle__img-tablet" src="img/content/cat-skinny-tablet.png" width="708" height="607"
+                  alt="После">
               </div>
             </div>
-            <p class="demo__caption">
-              <span>Затраты на питание: </span>
-              <span>15 000 руб.</span>
-            </p>
-          </div>
-          </div>
-          <div class="demo__progress">
-            <div class="demo__image-wrapper">
-              <div class="demo__illustration demo__illustration--before">
-                <img class="demo__image_fat" src="img/content/cat_fat_mobile.png" alt="cat_fat" width="311"
-                  height="232" />
+            <div class="toggle__control">
+              <label class="toggle__label toggle__label--before" for="story-input-before">Было</label>
+              <div class="toggle__range">
+                <div class="toggle__scale">
+                </div>
+                <button class="toggle__button" type="button">До/После</button>
               </div>
-              <div class="demo__illustration demo__illustration--after">
-                <img class="demo__image_skinny" src="img/content/cat_skinny_mobile.png" alt="cat_skinny" width="270"
-                  height="232" />
-              </div>
-              <div class="slider__controls">
-                <button class="slider__button" type="button">
-                  <span class="slider__button-text">Было</span>
-                </button>
-                <input class="slider__range" type="range" min="0" max="100" aria-label="Сравнить" />
-                <button class="slider__button" type="button">
-                  <span class="slider__button-text">Стало</span>
-                </button>
-              </div>
+              <label class="toggle__label toggle__label--after" for="story-input-after">Стало</label>
             </div>
           </div>
         </div>
@@ -242,7 +252,8 @@
         <div class="container">
           <img class="cooperation__image" src="img/content/map_mobile.png" alt="map" width="320" height="362" />
           <img class="cooperation__image--tablet" src="img/content/map_tablet.png" alt="map" width="768" height="400" />
-          <img class="cooperation__image--desktop" src="img/content/map_desktop.png" alt="map" width="1440" height="400" />
+          <img class="cooperation__image--desktop" src="img/content/map_desktop.png" alt="map" width="1440"
+            height="400" />
         </div>
       </div>
     </section>
